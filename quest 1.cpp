@@ -6,28 +6,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int main() {
+    int A[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int B[3][3];
 
-int main(){
-	int a, b, j, i;
-	int l = 3;
-	int c = 2;
-	
-	int *pl;
-	int *pc;
-	
-	pl = l;
-	pc = c;
-	
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            B[j][i] = A[i][j];
+        }
+    }
+    printf("\n");
 
-	
-	for(int i = 0; i < pl; i++){
-		
-		for(int j = 0; j < pc; j++){
-			b[i][j] = a[j][i];
-		}
+    printf("A matriz transposta é: ");
+    for(int i = 0; i < 3; i++){
+    	for (int j = 0; j < 3; j++){
+        printf("%d\n", B[i][j]);
 	}
-	
-	printf("A matriz transposta eh: %d", a[j][i]);
-	
-	return 0;
+        
+    }
+    printf("\n");
+
+    return 0;
 }
