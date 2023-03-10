@@ -4,6 +4,12 @@
 //A = [[2, 3],
 //[1, 4]]
 
+//O determinante de uma matriz é uma função matricial que converte uma matriz quadrada em um escalar.
+//Para uma matriz quadrada de ordem 2, o determinante é definido como:
+
+//det(acbd)=a·d-c·b
+
+
 int main() {
 	printf("-----------------------------------------\n\n");
 
