@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
+#define LIN 2
+#define COL 2
 //Dada a matriz A abaixo, calcule o determinante:
 //A = [[2, 3],
 //[1, 4]]
@@ -17,12 +19,29 @@ int main() {
 	
 	printf("-----------------------------------------\n\n");
 	
-    int matrizA[2][2] = {{2, 3}, {1, 4}};
-    int determinante;
-
-    determinante = (matrizA[0][0] * matrizA[1][1]) - (matrizA[0][1] * matrizA[1][0]);
-
-    printf("O determinante da matriz eh: %d", determinante);
-
-    return 0;
+    int m[LIN][COL]; // matriz
+	int d, dp = 1, ds = 1; //determinante
+	
+	for(int i = 0; i < LIN; i++){
+		for(int j = 0; j < COL; j++){
+			printf("Informe o valor da posição [%d][%d]: ", i, j);
+			scanf("%d", &m[i][j]);
+		}
+		printf("\n");
+	}
+	
+	for(int i = 0; i < LIN; i++){
+		for(int j = 0; j < COL; j++){
+			if(i==j){
+				dp*=m[i][j];
+			}
+			if(j==(COL - 1) - i){
+				ds*=m[i][j];
+			}
+		}
+	}
+	d = dp - ds;
+	printf("O determinante é: %d", d);
+	
+	return 0;
 }
