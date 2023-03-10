@@ -7,6 +7,9 @@
 //[8, 9, 6]   ]
 
 int main(){
+	
+	
+	
 	int i, j;
 	int matriz[3][3];
 	
@@ -16,6 +19,7 @@ int main(){
 			printf("Informe os valores da matriz: ");
 			scanf("%d", &matriz[i][j]);
 		}
+		printf("\n");
 	}
 	printf("\n");
 	
@@ -24,7 +28,14 @@ int main(){
 	printf("= = = = = = = = = = = = = = = = = = = = = =\n\n");
 	
 	for(int i = 0; i < 3; i++){
-		printf("%d", matriz[i][i]);
+		printf("%d ", matriz[i][i]);
+	}
+	printf("\n");
+	
+	printf("\tDIAGONAL SECUNDÁRIA\n\n");
+	printf("= = = = = = = = = = = = = = = = = = = = = =\n\n");
+	for(int i = 0; i < 3; i++){
+		printf("%d ", matriz[i][3 - 1 - i]);
 	}
 	return 0;
 }
