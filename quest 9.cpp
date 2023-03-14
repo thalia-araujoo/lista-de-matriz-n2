@@ -25,9 +25,9 @@ int main(){
 	
 	//invertir a ordem, assim ele gira da direita para a esquerda
 	// colunas como se fossem linhas, "girando" a matriz em 90°. 
-	for(j = 1; j >= 0; j--)       
+	for(int j = 1; j >= 0; j--)       
 	{
-        for(i = 0; i < 2; i++)
+        for(int i = 0; i < 2; i++)
         {
             printf("%d    ", mat[i][j]);
         }
