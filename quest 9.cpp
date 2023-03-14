@@ -23,7 +23,7 @@ int main(){
 	printf("\tMATRIZ ROTACIONADA\n");
 	printf("---------------------------\n\n");
 	
-	//usei a logica de trocas de variaveis decrecendo, assim ele gira da direita para a esquerda
+	//invertir a ordem, assim ele gira da direita para a esquerda
 	// colunas como se fossem linhas, "girando" a matriz em 90°. 
 	for(j = 1; j >= 0; j--)       
 	{
